@@ -26,6 +26,6 @@ class baeminMain: UIViewController {
         UIGraphicsEndImageContext()
         return newImage!
     }
-    
+    var test = "it's a word for test"
 
 }

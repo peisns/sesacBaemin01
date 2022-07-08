@@ -27,5 +27,6 @@ class baeminMain: UIViewController {
         return newImage!
     }
     var test = "it's a word for test"
+    var test2 = "it's a word for test"
 
 }

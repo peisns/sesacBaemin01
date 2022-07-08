@@ -148,7 +148,7 @@
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <buttonConfiguration key="configuration" style="plain" image="gift" catalog="system"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xpb-L9-bmD">
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xpb-L9-bmD">
                                 <rect key="frame" x="132" y="446" width="150" height="150"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="150" id="NW3-Py-0uD"/>
@@ -163,13 +163,111 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xj5-zm-MRO">
+                                <rect key="frame" x="0.0" y="721" width="414" height="175"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s9a-vs-5Zv">
+                                        <rect key="frame" x="30" y="0.0" width="354" height="175"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rhB-KP-6zJ">
+                                                <rect key="frame" x="0.0" y="0.0" width="118" height="175"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nTu-fV-AUu">
+                                                        <rect key="frame" x="10.5" y="39" width="97" height="97"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="97" id="3im-6c-0CG"/>
+                                                            <constraint firstAttribute="width" constant="97" id="ehs-k5-ajC"/>
+                                                        </constraints>
+                                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <buttonConfiguration key="configuration" style="plain" image="message.fill" catalog="system" imagePlacement="top" title="나와의 채팅" imagePadding="8">
+                                                            <fontDescription key="titleFontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="12"/>
+                                                        </buttonConfiguration>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstItem="nTu-fV-AUu" firstAttribute="centerX" secondItem="rhB-KP-6zJ" secondAttribute="centerX" id="ale-R6-LOF"/>
+                                                    <constraint firstItem="nTu-fV-AUu" firstAttribute="centerY" secondItem="rhB-KP-6zJ" secondAttribute="centerY" id="lAL-Wj-seU"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eZo-4I-wVD">
+                                                <rect key="frame" x="118" y="0.0" width="118" height="175"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ReZ-me-Lni">
+                                                        <rect key="frame" x="10.5" y="39" width="97" height="97"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="97" id="H2Y-14-s1M"/>
+                                                            <constraint firstAttribute="width" constant="97" id="wiU-FO-DDX"/>
+                                                        </constraints>
+                                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <buttonConfiguration key="configuration" style="plain" image="pencil.circle" catalog="system" imagePlacement="top" title="프로필 편집" imagePadding="8">
+                                                            <fontDescription key="titleFontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="12"/>
+                                                        </buttonConfiguration>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstItem="ReZ-me-Lni" firstAttribute="centerY" secondItem="eZo-4I-wVD" secondAttribute="centerY" id="Fc9-hL-ffO"/>
+                                                    <constraint firstItem="ReZ-me-Lni" firstAttribute="centerX" secondItem="eZo-4I-wVD" secondAttribute="centerX" id="NxD-rb-XsW"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OZo-Hc-mcY">
+                                                <rect key="frame" x="236" y="0.0" width="118" height="175"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4SQ-tE-YQr">
+                                                        <rect key="frame" x="10.5" y="39" width="97" height="97"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="97" id="1UK-sH-btb"/>
+                                                            <constraint firstAttribute="width" constant="97" id="Fxy-HQ-oFf"/>
+                                                        </constraints>
+                                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <buttonConfiguration key="configuration" style="plain" image="quote.closing" catalog="system" imagePlacement="top" title="카카오스토리" imagePadding="8">
+                                                            <fontDescription key="titleFontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="12"/>
+                                                        </buttonConfiguration>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstItem="4SQ-tE-YQr" firstAttribute="centerY" secondItem="OZo-Hc-mcY" secondAttribute="centerY" id="9CN-cM-usN"/>
+                                                    <constraint firstItem="4SQ-tE-YQr" firstAttribute="centerX" secondItem="OZo-Hc-mcY" secondAttribute="centerX" id="eGy-78-LmR"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="rhB-KP-6zJ" firstAttribute="top" secondItem="s9a-vs-5Zv" secondAttribute="top" id="0c8-ok-iiF"/>
+                                            <constraint firstItem="rhB-KP-6zJ" firstAttribute="leading" secondItem="s9a-vs-5Zv" secondAttribute="leading" id="8GA-9T-zN4"/>
+                                            <constraint firstAttribute="bottom" secondItem="rhB-KP-6zJ" secondAttribute="bottom" id="CUc-K1-hOW"/>
+                                            <constraint firstItem="OZo-Hc-mcY" firstAttribute="width" secondItem="s9a-vs-5Zv" secondAttribute="width" multiplier="1/3" id="Nvg-ZI-3Fv"/>
+                                            <constraint firstItem="eZo-4I-wVD" firstAttribute="centerX" secondItem="s9a-vs-5Zv" secondAttribute="centerX" id="OOp-9o-alp"/>
+                                            <constraint firstItem="eZo-4I-wVD" firstAttribute="centerY" secondItem="s9a-vs-5Zv" secondAttribute="centerY" id="OXz-oE-Hht"/>
+                                            <constraint firstAttribute="trailing" secondItem="OZo-Hc-mcY" secondAttribute="trailing" id="Yee-Sa-eTe"/>
+                                            <constraint firstItem="OZo-Hc-mcY" firstAttribute="height" secondItem="s9a-vs-5Zv" secondAttribute="height" id="fP2-Mq-CQC"/>
+                                            <constraint firstItem="eZo-4I-wVD" firstAttribute="height" secondItem="s9a-vs-5Zv" secondAttribute="height" id="fnp-4c-EDl"/>
+                                            <constraint firstItem="eZo-4I-wVD" firstAttribute="width" secondItem="s9a-vs-5Zv" secondAttribute="width" multiplier="1/3" id="iKf-GX-crG"/>
+                                            <constraint firstItem="OZo-Hc-mcY" firstAttribute="centerY" secondItem="s9a-vs-5Zv" secondAttribute="centerY" id="iLd-he-Sf1"/>
+                                            <constraint firstItem="rhB-KP-6zJ" firstAttribute="width" secondItem="s9a-vs-5Zv" secondAttribute="width" multiplier="1/3" id="ngs-Ew-E1E"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="175" id="EJ1-Cp-f5i"/>
+                                    <constraint firstItem="s9a-vs-5Zv" firstAttribute="top" secondItem="Xj5-zm-MRO" secondAttribute="top" id="agb-sL-eE5"/>
+                                    <constraint firstItem="s9a-vs-5Zv" firstAttribute="leading" secondItem="Xj5-zm-MRO" secondAttribute="leading" constant="30" id="put-59-DRF"/>
+                                    <constraint firstAttribute="bottom" secondItem="s9a-vs-5Zv" secondAttribute="bottom" id="uSr-Dt-7B2"/>
+                                    <constraint firstAttribute="trailing" secondItem="s9a-vs-5Zv" secondAttribute="trailing" constant="30" id="vpx-0l-mBv"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="YOU-7k-0cL"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="JnI-sU-hDP" firstAttribute="width" secondItem="yHe-Gq-Rof" secondAttribute="width" id="1dx-qp-pmf"/>
+                            <constraint firstItem="Xj5-zm-MRO" firstAttribute="leading" secondItem="YOU-7k-0cL" secondAttribute="leading" id="2gb-8A-NjR"/>
                             <constraint firstItem="yHe-Gq-Rof" firstAttribute="width" secondItem="GAE-Zr-xp3" secondAttribute="width" id="6Fu-9m-cDT"/>
                             <constraint firstItem="JnI-sU-hDP" firstAttribute="height" secondItem="yHe-Gq-Rof" secondAttribute="height" id="9Iq-w9-sEb"/>
+                            <constraint firstAttribute="bottom" secondItem="Xj5-zm-MRO" secondAttribute="bottom" id="Cpa-qb-lhs"/>
                             <constraint firstItem="YOU-7k-0cL" firstAttribute="trailing" secondItem="Xkg-3j-Hsc" secondAttribute="trailing" id="FcD-WJ-szc"/>
                             <constraint firstItem="mmj-e7-lhx" firstAttribute="trailing" secondItem="YOU-7k-0cL" secondAttribute="trailing" id="Gcn-KE-89h"/>
                             <constraint firstItem="yHe-Gq-Rof" firstAttribute="centerY" secondItem="GAE-Zr-xp3" secondAttribute="centerY" id="NvW-wb-aj5"/>
@@ -192,10 +290,12 @@
                             <constraint firstItem="Xkg-3j-Hsc" firstAttribute="top" secondItem="3oL-sq-aOo" secondAttribute="top" id="tWw-9n-03L"/>
                             <constraint firstItem="mmj-e7-lhx" firstAttribute="top" secondItem="3oL-sq-aOo" secondAttribute="top" id="v2Z-Dc-gmE"/>
                             <constraint firstItem="GAE-Zr-xp3" firstAttribute="leading" secondItem="yHe-Gq-Rof" secondAttribute="trailing" constant="8" id="vmL-cl-7l6"/>
+                            <constraint firstItem="YOU-7k-0cL" firstAttribute="trailing" secondItem="Xj5-zm-MRO" secondAttribute="trailing" id="wXN-WF-UYH"/>
                             <constraint firstItem="GAE-Zr-xp3" firstAttribute="centerY" secondItem="3tU-Ot-NCc" secondAttribute="centerY" id="xsb-Xu-6Cy"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="profileBottomView" destination="Xj5-zm-MRO" id="Wyn-ja-Ijj"/>
                         <outlet property="profileImageButton" destination="Xpb-L9-bmD" id="hMq-7Q-dKZ"/>
                     </connections>
                 </viewController>
@@ -777,6 +877,7 @@
         <image name="gearshape.circle" catalog="system" width="128" height="121"/>
         <image name="gift" catalog="system" width="128" height="124"/>
         <image name="kakaoBackground" width="1588" height="2117"/>
+        <image name="message.fill" catalog="system" width="128" height="113"/>
         <image name="mono_baedal01" width="112" height="62"/>
         <image name="mono_baedal02" width="69" height="94"/>
         <image name="mono_baedal03" width="92" height="92"/>
@@ -784,7 +885,9 @@
         <image name="mono_baedal05" width="92" height="99"/>
         <image name="mono_baedal06" width="78" height="96"/>
         <image name="mono_baedal07" width="80" height="56"/>
+        <image name="pencil.circle" catalog="system" width="128" height="121"/>
         <image name="qrcode.viewfinder" catalog="system" width="128" height="115"/>
+        <image name="quote.closing" catalog="system" width="128" height="79"/>
         <image name="shop" width="63" height="63"/>
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

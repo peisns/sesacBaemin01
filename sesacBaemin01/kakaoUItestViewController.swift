@@ -11,10 +11,16 @@ class kakaoUItestViewController: UIViewController {
 
     @IBOutlet weak var profileImageButton: UIButton!
     
+    @IBOutlet weak var profileBottomView: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         profileImageButton.setImage(self.resizeImage(image: UIImage(named: "kakaoProfile.jpeg")!, width: 150, height: 150), for: UIControl.State.normal)
+        profileImageButton.layer.cornerRadius = 65
+        
+        profileBottomView.layer.borderWidth = 1
+        profileBottomView.layer.borderColor = UIColor.white.cgColor
         
     }
     

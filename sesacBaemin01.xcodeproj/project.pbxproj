@@ -7,30 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		351301CA28884B5B00594BE9 /* TabBarTest01.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 351301C928884B5B00594BE9 /* TabBarTest01.storyboard */; };
-		351301CC28884B7500594BE9 /* TabBarTest01ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 351301CB28884B7500594BE9 /* TabBarTest01ViewController.swift */; };
-		351301CE2888508E00594BE9 /* TabBarTest01_2_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 351301CD2888508E00594BE9 /* TabBarTest01_2_ViewController.swift */; };
-		352ABAA3287816A2005EE074 /* kakaoUItestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352ABAA2287816A2005EE074 /* kakaoUItestViewController.swift */; };
-		353E0640287FBE4A0083C309 /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 353E063F287FBE4A0083C309 /* IQKeyboardManagerSwift */; };
 		35BEDD902874055B00EF4334 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35BEDD8F2874055B00EF4334 /* AppDelegate.swift */; };
 		35BEDD922874055B00EF4334 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35BEDD912874055B00EF4334 /* SceneDelegate.swift */; };
 		35BEDD942874055B00EF4334 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35BEDD932874055B00EF4334 /* ViewController.swift */; };
 		35BEDD972874055B00EF4334 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35BEDD952874055B00EF4334 /* Main.storyboard */; };
 		35BEDD992874056000EF4334 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35BEDD982874056000EF4334 /* Assets.xcassets */; };
 		35BEDD9C2874056000EF4334 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35BEDD9A2874056000EF4334 /* LaunchScreen.storyboard */; };
-		35FED780287FA68600BD3C4B /* Setting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35FED77F287FA68600BD3C4B /* Setting.storyboard */; };
-		35FED783287FA83800BD3C4B /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35FED782287FA83800BD3C4B /* Search.storyboard */; };
-		35FED786287FAEE300BD3C4B /* SideMenu in Frameworks */ = {isa = PBXBuildFile; productRef = 35FED785287FAEE300BD3C4B /* SideMenu */; };
-		35FED789287FAF4800BD3C4B /* FSCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = 35FED788287FAF4800BD3C4B /* FSCalendar */; };
-		35FED78C287FB00B00BD3C4B /* TextFieldEffects in Frameworks */ = {isa = PBXBuildFile; productRef = 35FED78B287FB00B00BD3C4B /* TextFieldEffects */; };
-		35FF375C28746C9F00238889 /* baeminMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35FF375B28746C9F00238889 /* baeminMain.swift */; };
+		35F4E82E28AFA236007CA1FA /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F4E82D28AFA236007CA1FA /* HomeViewController.swift */; };
+		35F4E83328AFB483007CA1FA /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F4E83228AFB483007CA1FA /* BaseViewController.swift */; };
+		35F4E83628AFBAD7007CA1FA /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 35F4E83528AFBAD7007CA1FA /* SnapKit */; };
+		35F4E83828AFBFEB007CA1FA /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F4E83728AFBFEB007CA1FA /* HomeView.swift */; };
+		35F4E83A28AFC0A7007CA1FA /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F4E83928AFC0A7007CA1FA /* BaseView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		351301C928884B5B00594BE9 /* TabBarTest01.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBarTest01.storyboard; sourceTree = "<group>"; };
-		351301CB28884B7500594BE9 /* TabBarTest01ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarTest01ViewController.swift; sourceTree = "<group>"; };
-		351301CD2888508E00594BE9 /* TabBarTest01_2_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarTest01_2_ViewController.swift; sourceTree = "<group>"; };
-		352ABAA2287816A2005EE074 /* kakaoUItestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = kakaoUItestViewController.swift; sourceTree = "<group>"; };
 		35BEDD8C2874055B00EF4334 /* sesacBaemin01.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sesacBaemin01.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		35BEDD8F2874055B00EF4334 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		35BEDD912874055B00EF4334 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -39,9 +29,10 @@
 		35BEDD982874056000EF4334 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		35BEDD9B2874056000EF4334 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		35BEDD9D2874056000EF4334 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		35FED77F287FA68600BD3C4B /* Setting.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Setting.storyboard; sourceTree = "<group>"; };
-		35FED782287FA83800BD3C4B /* Search.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
-		35FF375B28746C9F00238889 /* baeminMain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = baeminMain.swift; sourceTree = "<group>"; tabWidth = 4; };
+		35F4E82D28AFA236007CA1FA /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		35F4E83228AFB483007CA1FA /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		35F4E83728AFBFEB007CA1FA /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		35F4E83928AFC0A7007CA1FA /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,26 +40,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				35FED78C287FB00B00BD3C4B /* TextFieldEffects in Frameworks */,
-				353E0640287FBE4A0083C309 /* IQKeyboardManagerSwift in Frameworks */,
-				35FED786287FAEE300BD3C4B /* SideMenu in Frameworks */,
-				35FED789287FAF4800BD3C4B /* FSCalendar in Frameworks */,
+				35F4E83628AFBAD7007CA1FA /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		351E8194288793D600D62BED /* TabBartest */ = {
-			isa = PBXGroup;
-			children = (
-				351301C928884B5B00594BE9 /* TabBarTest01.storyboard */,
-				351301CB28884B7500594BE9 /* TabBarTest01ViewController.swift */,
-				351301CD2888508E00594BE9 /* TabBarTest01_2_ViewController.swift */,
-			);
-			path = TabBartest;
-			sourceTree = "<group>";
-		};
 		35BEDD832874055B00EF4334 = {
 			isa = PBXGroup;
 			children = (
@@ -88,15 +66,12 @@
 		35BEDD8E2874055B00EF4334 /* sesacBaemin01 */ = {
 			isa = PBXGroup;
 			children = (
-				351E8194288793D600D62BED /* TabBartest */,
-				35BEDDA6287406BA00EF4334 /* Fonts */,
+				35F4E83128AFB46E007CA1FA /* Base */,
+				35F4E83028AFB220007CA1FA /* Home */,
 				35BEDD8F2874055B00EF4334 /* AppDelegate.swift */,
 				35BEDD912874055B00EF4334 /* SceneDelegate.swift */,
 				35BEDD932874055B00EF4334 /* ViewController.swift */,
 				35BEDD952874055B00EF4334 /* Main.storyboard */,
-				35FED781287FA82000BD3C4B /* New Group */,
-				352ABAA2287816A2005EE074 /* kakaoUItestViewController.swift */,
-				35FF375B28746C9F00238889 /* baeminMain.swift */,
 				35BEDD982874056000EF4334 /* Assets.xcassets */,
 				35BEDD9A2874056000EF4334 /* LaunchScreen.storyboard */,
 				35BEDD9D2874056000EF4334 /* Info.plist */,
@@ -104,20 +79,22 @@
 			path = sesacBaemin01;
 			sourceTree = "<group>";
 		};
-		35BEDDA6287406BA00EF4334 /* Fonts */ = {
+		35F4E83028AFB220007CA1FA /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				35F4E82D28AFA236007CA1FA /* HomeViewController.swift */,
+				35F4E83728AFBFEB007CA1FA /* HomeView.swift */,
 			);
-			path = Fonts;
+			path = Home;
 			sourceTree = "<group>";
 		};
-		35FED781287FA82000BD3C4B /* New Group */ = {
+		35F4E83128AFB46E007CA1FA /* Base */ = {
 			isa = PBXGroup;
 			children = (
-				35FED77F287FA68600BD3C4B /* Setting.storyboard */,
-				35FED782287FA83800BD3C4B /* Search.storyboard */,
+				35F4E83228AFB483007CA1FA /* BaseViewController.swift */,
+				35F4E83928AFC0A7007CA1FA /* BaseView.swift */,
 			);
-			path = "New Group";
+			path = Base;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,10 +114,7 @@
 			);
 			name = sesacBaemin01;
 			packageProductDependencies = (
-				35FED785287FAEE300BD3C4B /* SideMenu */,
-				35FED788287FAF4800BD3C4B /* FSCalendar */,
-				35FED78B287FB00B00BD3C4B /* TextFieldEffects */,
-				353E063F287FBE4A0083C309 /* IQKeyboardManagerSwift */,
+				35F4E83528AFBAD7007CA1FA /* SnapKit */,
 			);
 			productName = sesacBaemin01;
 			productReference = 35BEDD8C2874055B00EF4334 /* sesacBaemin01.app */;
@@ -171,10 +145,7 @@
 			);
 			mainGroup = 35BEDD832874055B00EF4334;
 			packageReferences = (
-				35FED784287FAEE300BD3C4B /* XCRemoteSwiftPackageReference "SideMenu" */,
-				35FED787287FAF4800BD3C4B /* XCRemoteSwiftPackageReference "FSCalendar" */,
-				35FED78A287FB00B00BD3C4B /* XCRemoteSwiftPackageReference "TextFieldEffects" */,
-				353E063E287FBE4A0083C309 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
+				35F4E83428AFBAD7007CA1FA /* XCRemoteSwiftPackageReference "SnapKit" */,
 			);
 			productRefGroup = 35BEDD8D2874055B00EF4334 /* Products */;
 			projectDirPath = "";
@@ -191,11 +162,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				35BEDD9C2874056000EF4334 /* LaunchScreen.storyboard in Resources */,
-				351301CA28884B5B00594BE9 /* TabBarTest01.storyboard in Resources */,
 				35BEDD992874056000EF4334 /* Assets.xcassets in Resources */,
-				35FED780287FA68600BD3C4B /* Setting.storyboard in Resources */,
 				35BEDD972874055B00EF4334 /* Main.storyboard in Resources */,
-				35FED783287FA83800BD3C4B /* Search.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -206,13 +174,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				351301CE2888508E00594BE9 /* TabBarTest01_2_ViewController.swift in Sources */,
-				35FF375C28746C9F00238889 /* baeminMain.swift in Sources */,
+				35F4E83328AFB483007CA1FA /* BaseViewController.swift in Sources */,
 				35BEDD942874055B00EF4334 /* ViewController.swift in Sources */,
 				35BEDD902874055B00EF4334 /* AppDelegate.swift in Sources */,
+				35F4E83828AFBFEB007CA1FA /* HomeView.swift in Sources */,
+				35F4E83A28AFC0A7007CA1FA /* BaseView.swift in Sources */,
 				35BEDD922874055B00EF4334 /* SceneDelegate.swift in Sources */,
-				351301CC28884B7500594BE9 /* TabBarTest01ViewController.swift in Sources */,
-				352ABAA3287816A2005EE074 /* kakaoUItestViewController.swift in Sources */,
+				35F4E82E28AFA236007CA1FA /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -365,10 +333,11 @@
 				INFOPLIST_FILE = sesacBaemin01/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = TabBarTest01;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -397,10 +366,11 @@
 				INFOPLIST_FILE = sesacBaemin01/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = TabBarTest01;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -440,60 +410,21 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		353E063E287FBE4A0083C309 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
+		35F4E83428AFBAD7007CA1FA /* XCRemoteSwiftPackageReference "SnapKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/hackiftekhar/IQKeyboardManager.git";
-			requirement = {
-				kind = exactVersion;
-				version = 6.5.0;
-			};
-		};
-		35FED784287FAEE300BD3C4B /* XCRemoteSwiftPackageReference "SideMenu" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/jonkykong/SideMenu.git";
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 6.0.0;
-			};
-		};
-		35FED787287FAF4800BD3C4B /* XCRemoteSwiftPackageReference "FSCalendar" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/WenchaoD/FSCalendar.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 2.0.0;
-			};
-		};
-		35FED78A287FB00B00BD3C4B /* XCRemoteSwiftPackageReference "TextFieldEffects" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/raulriera/TextFieldEffects.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.0;
+				minimumVersion = 5.0.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		353E063F287FBE4A0083C309 /* IQKeyboardManagerSwift */ = {
+		35F4E83528AFBAD7007CA1FA /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 353E063E287FBE4A0083C309 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
-			productName = IQKeyboardManagerSwift;
-		};
-		35FED785287FAEE300BD3C4B /* SideMenu */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 35FED784287FAEE300BD3C4B /* XCRemoteSwiftPackageReference "SideMenu" */;
-			productName = SideMenu;
-		};
-		35FED788287FAF4800BD3C4B /* FSCalendar */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 35FED787287FAF4800BD3C4B /* XCRemoteSwiftPackageReference "FSCalendar" */;
-			productName = FSCalendar;
-		};
-		35FED78B287FB00B00BD3C4B /* TextFieldEffects */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 35FED78A287FB00B00BD3C4B /* XCRemoteSwiftPackageReference "TextFieldEffects" */;
-			productName = TextFieldEffects;
+			package = 35F4E83428AFBAD7007CA1FA /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

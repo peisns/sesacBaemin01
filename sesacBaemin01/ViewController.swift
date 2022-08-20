@@ -20,11 +20,9 @@ class ViewController: UIViewController {
     }
     
     func presentFirstScene() {
-        let vc = HomeViewController()
-        vc.modalPresentationStyle = .fullScreen
-        present(vc, animated: false)
+        let navController = UINavigationController(rootViewController: HomeViewController())
+        navController.modalPresentationStyle = .fullScreen
+        present(navController, animated: false)
     }
-
-
 }
 

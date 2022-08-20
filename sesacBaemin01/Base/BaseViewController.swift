@@ -12,14 +12,7 @@ class BaseViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(String(describing: type(of: self)), #function)
+        print("BaseVC", #function)
         
-        configure()
-        
-        setConstraints()
     }
-    
-    func configure() { }
-    
-    func setConstraints() { }
 }

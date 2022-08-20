@@ -7,11 +7,13 @@
 
 import UIKit
 
+import SnapKit
+
 class BaseView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
-        
         configure()
+        setConstraints()
     }
     
     required init?(coder: NSCoder) {
@@ -19,6 +21,13 @@ class BaseView: UIView {
     }
     
     func configure() {
-        self.backgroundColor = .brown
+        print("BaseVC", #function)
+        self.backgroundColor = UIColor(red: 246, green: 246, blue: 246, alpha: 1)
+        print(String(describing: type(of: self)), #function)
+
+    }
+    
+    func setConstraints() {
+        print("BaseVC", #function)
     }
 }

@@ -8,7 +8,7 @@
 import UIKit
 
 class HomeView: BaseView {
-
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
     }
@@ -18,5 +18,16 @@ class HomeView: BaseView {
     }
     
     override func configure() {
+        super.configure()
+        print("HomeV", #function)
+        
+        
     }
+    
+    override func setConstraints() {
+        super.setConstraints()
+        
+    }
+    
+    
 }

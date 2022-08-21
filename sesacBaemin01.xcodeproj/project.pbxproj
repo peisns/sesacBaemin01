@@ -18,6 +18,8 @@
 		35F4E83628AFBAD7007CA1FA /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 35F4E83528AFBAD7007CA1FA /* SnapKit */; };
 		35F4E83828AFBFEB007CA1FA /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F4E83728AFBFEB007CA1FA /* HomeView.swift */; };
 		35F4E83A28AFC0A7007CA1FA /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F4E83928AFC0A7007CA1FA /* BaseView.swift */; };
+		35F4E83E28B1FEAC007CA1FA /* CommomProperty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F4E83D28B1FEAC007CA1FA /* CommomProperty.swift */; };
+		35F4E84328B24935007CA1FA /* CommonNavBarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F4E84228B24935007CA1FA /* CommonNavBarButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +35,8 @@
 		35F4E83228AFB483007CA1FA /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		35F4E83728AFBFEB007CA1FA /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		35F4E83928AFC0A7007CA1FA /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		35F4E83D28B1FEAC007CA1FA /* CommomProperty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommomProperty.swift; sourceTree = "<group>"; };
+		35F4E84228B24935007CA1FA /* CommonNavBarButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonNavBarButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +70,7 @@
 		35BEDD8E2874055B00EF4334 /* sesacBaemin01 */ = {
 			isa = PBXGroup;
 			children = (
+				35F4E83C28B1FE96007CA1FA /* Common */,
 				35F4E83128AFB46E007CA1FA /* Base */,
 				35F4E83028AFB220007CA1FA /* Home */,
 				35BEDD8F2874055B00EF4334 /* AppDelegate.swift */,
@@ -95,6 +100,23 @@
 				35F4E83928AFC0A7007CA1FA /* BaseView.swift */,
 			);
 			path = Base;
+			sourceTree = "<group>";
+		};
+		35F4E83C28B1FE96007CA1FA /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				35F4E83F28B205C2007CA1FA /* CommonClass */,
+				35F4E83D28B1FEAC007CA1FA /* CommomProperty.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		35F4E83F28B205C2007CA1FA /* CommonClass */ = {
+			isa = PBXGroup;
+			children = (
+				35F4E84228B24935007CA1FA /* CommonNavBarButton.swift */,
+			);
+			path = CommonClass;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -178,8 +200,10 @@
 				35BEDD942874055B00EF4334 /* ViewController.swift in Sources */,
 				35BEDD902874055B00EF4334 /* AppDelegate.swift in Sources */,
 				35F4E83828AFBFEB007CA1FA /* HomeView.swift in Sources */,
+				35F4E83E28B1FEAC007CA1FA /* CommomProperty.swift in Sources */,
 				35F4E83A28AFC0A7007CA1FA /* BaseView.swift in Sources */,
 				35BEDD922874055B00EF4334 /* SceneDelegate.swift in Sources */,
+				35F4E84328B24935007CA1FA /* CommonNavBarButton.swift in Sources */,
 				35F4E82E28AFA236007CA1FA /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

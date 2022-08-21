@@ -11,6 +11,9 @@ class HomeView: BaseView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        
+        configure()
+        setConstraints()
     }
     
     required init?(coder: NSCoder) {
@@ -21,7 +24,7 @@ class HomeView: BaseView {
         super.configure()
         print("HomeV", #function)
         
-        
+        backgroundColor = Common.backgroundColor
     }
     
     override func setConstraints() {

@@ -22,7 +22,7 @@ class BaseView: UIView {
     
     func configure() {
         print("BaseVC", #function)
-        self.backgroundColor = UIColor(red: 246, green: 246, blue: 246, alpha: 1)
+        self.backgroundColor = Common.backgroundColor
         print(String(describing: type(of: self)), #function)
 
     }

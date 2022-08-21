@@ -19,7 +19,10 @@
 		35F4E83828AFBFEB007CA1FA /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F4E83728AFBFEB007CA1FA /* HomeView.swift */; };
 		35F4E83A28AFC0A7007CA1FA /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F4E83928AFC0A7007CA1FA /* BaseView.swift */; };
 		35F4E83E28B1FEAC007CA1FA /* CommomProperty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F4E83D28B1FEAC007CA1FA /* CommomProperty.swift */; };
-		35F4E84328B24935007CA1FA /* CommonNavBarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F4E84228B24935007CA1FA /* CommonNavBarButton.swift */; };
+		35F4E84628B286F2007CA1FA /* ModelHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F4E84528B286F2007CA1FA /* ModelHome.swift */; };
+		35F4E84928B2953A007CA1FA /* HomeSearchBarTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F4E84828B2953A007CA1FA /* HomeSearchBarTableViewCell.swift */; };
+		35F4E84C28B29769007CA1FA /* ReusableProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F4E84B28B29769007CA1FA /* ReusableProtocol.swift */; };
+		35F4E84F28B2A0F2007CA1FA /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F4E84E28B2A0F2007CA1FA /* UIViewController+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,7 +39,10 @@
 		35F4E83728AFBFEB007CA1FA /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		35F4E83928AFC0A7007CA1FA /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		35F4E83D28B1FEAC007CA1FA /* CommomProperty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommomProperty.swift; sourceTree = "<group>"; };
-		35F4E84228B24935007CA1FA /* CommonNavBarButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonNavBarButton.swift; sourceTree = "<group>"; };
+		35F4E84528B286F2007CA1FA /* ModelHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelHome.swift; sourceTree = "<group>"; };
+		35F4E84828B2953A007CA1FA /* HomeSearchBarTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSearchBarTableViewCell.swift; sourceTree = "<group>"; };
+		35F4E84B28B29769007CA1FA /* ReusableProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableProtocol.swift; sourceTree = "<group>"; };
+		35F4E84E28B2A0F2007CA1FA /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +76,9 @@
 		35BEDD8E2874055B00EF4334 /* sesacBaemin01 */ = {
 			isa = PBXGroup;
 			children = (
+				35F4E84D28B2A0C7007CA1FA /* Extension */,
+				35F4E84A28B29757007CA1FA /* Protocol */,
+				35F4E84428B286E1007CA1FA /* Model */,
 				35F4E83C28B1FE96007CA1FA /* Common */,
 				35F4E83128AFB46E007CA1FA /* Base */,
 				35F4E83028AFB220007CA1FA /* Home */,
@@ -87,6 +96,7 @@
 		35F4E83028AFB220007CA1FA /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				35F4E84728B294F7007CA1FA /* HomeSearchBar */,
 				35F4E82D28AFA236007CA1FA /* HomeViewController.swift */,
 				35F4E83728AFBFEB007CA1FA /* HomeView.swift */,
 			);
@@ -114,9 +124,40 @@
 		35F4E83F28B205C2007CA1FA /* CommonClass */ = {
 			isa = PBXGroup;
 			children = (
-				35F4E84228B24935007CA1FA /* CommonNavBarButton.swift */,
 			);
 			path = CommonClass;
+			sourceTree = "<group>";
+		};
+		35F4E84428B286E1007CA1FA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				35F4E84528B286F2007CA1FA /* ModelHome.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		35F4E84728B294F7007CA1FA /* HomeSearchBar */ = {
+			isa = PBXGroup;
+			children = (
+				35F4E84828B2953A007CA1FA /* HomeSearchBarTableViewCell.swift */,
+			);
+			path = HomeSearchBar;
+			sourceTree = "<group>";
+		};
+		35F4E84A28B29757007CA1FA /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				35F4E84B28B29769007CA1FA /* ReusableProtocol.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		35F4E84D28B2A0C7007CA1FA /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				35F4E84E28B2A0F2007CA1FA /* UIViewController+Extension.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -198,12 +239,15 @@
 			files = (
 				35F4E83328AFB483007CA1FA /* BaseViewController.swift in Sources */,
 				35BEDD942874055B00EF4334 /* ViewController.swift in Sources */,
+				35F4E84628B286F2007CA1FA /* ModelHome.swift in Sources */,
 				35BEDD902874055B00EF4334 /* AppDelegate.swift in Sources */,
+				35F4E84C28B29769007CA1FA /* ReusableProtocol.swift in Sources */,
 				35F4E83828AFBFEB007CA1FA /* HomeView.swift in Sources */,
+				35F4E84F28B2A0F2007CA1FA /* UIViewController+Extension.swift in Sources */,
+				35F4E84928B2953A007CA1FA /* HomeSearchBarTableViewCell.swift in Sources */,
 				35F4E83E28B1FEAC007CA1FA /* CommomProperty.swift in Sources */,
 				35F4E83A28AFC0A7007CA1FA /* BaseView.swift in Sources */,
 				35BEDD922874055B00EF4334 /* SceneDelegate.swift in Sources */,
-				35F4E84328B24935007CA1FA /* CommonNavBarButton.swift in Sources */,
 				35F4E82E28AFA236007CA1FA /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

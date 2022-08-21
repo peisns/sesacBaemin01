@@ -67,8 +67,11 @@ class HomeViewController: BaseViewController {
         
         let navBarAppearance = UINavigationBarAppearance()
         navBarAppearance.backgroundColor = Common.identityColor
+        navBarAppearance.shadowColor = .clear
         self.navigationController?.navigationBar.standardAppearance = navBarAppearance
         self.navigationController?.navigationBar.scrollEdgeAppearance = navBarAppearance
+        
+
     }
     
 }

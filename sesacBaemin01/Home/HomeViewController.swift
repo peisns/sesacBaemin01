@@ -27,54 +27,43 @@ class HomeViewController: BaseViewController {
     }
     
     func setNav() {
-//        var testButtonConfig = UIButton.Configuration.plain()
-//        testButtonConfig.image = UIImage(systemName: "arrowtriangle.down.fill")
-//        testButtonConfig.baseForegroundColor = .white
-//        testButtonConfig.imagePlacement = .trailing
-//        testButtonConfig.imagePadding = 4
-//        testButtonConfig.preferredSymbolConfigurationForImage = UIImage.SymbolConfiguration(pointSize: CGFloat(8))
-//        var attText = AttributedString.init("우리집")
-//        attText.font = UIFont.systemFont(ofSize: 20.0, weight: .bold)
-//        testButtonConfig.attributedTitle = attText
-//        let leftBtn = UIButton(configuration: testButtonConfig)
-//        let leftBarBtn = UIBarButtonItem(customView: leftBtn)
-        
-        
-            
-        var leftButtonConfig  = Common.setNavBarButtonConfiguration(configuration: UIButton.Configuration.plain(), imageSystemName: "arrowtriangle.down.fill", baseForeGroundColor: .white, imagePlacement: .trailing, imagePadding: 4, imageSize: 8, titleAttribute: nil)
-        let navLeftButton = UIButton(configuration: leftButtonConfig)
-        let navLeftBarButton = UIBarButtonItem(customView: navLeftButton)
-        print(leftButtonConfig)
+        var navLeftTitle = AttributedString.init("우리집")
+        navLeftTitle.font = UIFont.systemFont(ofSize: 22.0, weight: .bold)
+        var leftButtonConfig  = UIButton.Configuration.plain()
+        Common.setNavBarButtonConfiguration(configuration: &leftButtonConfig, imageSystemName: "arrowtriangle.down.fill", baseForeGroundColor: .white, imagePlacement: .trailing, imagePadding: 8, imageSize: 8, titleAttribute: navLeftTitle)
+        let navLeftBtn = UIButton(configuration: leftButtonConfig)
+        let navLeftBarBtn = UIBarButtonItem(customView: navLeftBtn)
 
-        let rightMenuBtn: UIButton = {
-           let btn = UIButton()
-            btn.setImage(UIImage(systemName: "square.grid.2x2"), for: .normal)
-            btn.tintColor = .white
-            return btn
-        }()
-        let rightMenuBarButton = UIBarButtonItem(customView: rightMenuBtn)
-
-        let rightNotiBtn: UIButton = {
-           let btn = UIButton()
-            btn.setImage(UIImage(systemName: "bell"), for: .normal)
-            btn.tintColor = .white
-            return btn
-        }()
-        let rightNotiBarButton = UIBarButtonItem(customView: rightNotiBtn)
-        
-        let rightProfileBtn: UIButton = {
-           let btn = UIButton()
-            btn.setImage(UIImage(systemName: "face.smiling"), for: .normal)
-            btn.tintColor = .white
-            return btn
-        }()
-        let rightProfileBarButton = UIBarButtonItem(customView: rightProfileBtn)
-        
-        let spacer = UIBarButtonItem(barButtonSystemItem: .fixedSpace, target: nil, action: nil)
-        spacer.width = 15
+        var navRightMenuBtnConfig = UIButton.Configuration.plain()
+        Common.setNavBarButtonConfiguration(configuration: &navRightMenuBtnConfig, imageSystemName: "square.grid.2x2")
+        navRightMenuBtnConfig.contentInsets = NSDirectionalEdgeInsets(top: 8, leading: 4, bottom: 8, trailing: 4)
+        let navRightMenuBtn = UIButton(configuration: navRightMenuBtnConfig)
+        let navRightMenuBarBtn = UIBarButtonItem(customView: navRightMenuBtn)
+//
+        var navRightNotiBtnConfig = UIButton.Configuration.plain()
+        Common.setNavBarButtonConfiguration(configuration: &navRightNotiBtnConfig, imageSystemName: "bell")
+        navRightNotiBtnConfig.contentInsets = NSDirectionalEdgeInsets(top: 8, leading: 4, bottom: 8, trailing: 4)
+        let navRightNotiBtn = UIButton(configuration: navRightNotiBtnConfig)
+        let navRightNotiBarBtn = UIBarButtonItem(customView: navRightNotiBtn)
+//
+        var navRightProfileBtnConfig = UIButton.Configuration.plain()
+        Common.setNavBarButtonConfiguration(configuration: &navRightProfileBtnConfig, imageSystemName: "face.smiling")
+        navRightProfileBtnConfig.contentInsets = NSDirectionalEdgeInsets(top: 8, leading: 4, bottom: 8, trailing: 4)
+        let navRightProfileBtn = UIButton(configuration: navRightProfileBtnConfig)
+        let navRightProfileBarBtn = UIBarButtonItem(customView: navRightProfileBtn)
     
-        navigationItem.leftBarButtonItem = navLeftBarButton
-        navigationItem.rightBarButtonItems = [rightMenuBarButton, spacer,  rightNotiBarButton, spacer, rightProfileBarButton].reversed()
+//        let navRightconfigs = [navRightMenuBtnConfig, navRightNotiBtnConfig, navRightProfileBtnConfig]
+//        var navConfigIndex = 0
+//        let navRightImages = ["square.grid.2x2", "bell", "face.smiling"]
+//        for config in navRightconfigs {
+//            var config = config // 왜 이렇게 해줘야 하는지 잘 모르겠음
+//            Common.setNavBarButtonConfiguration(configuration: &config, imageSystemName: navRightImages[navConfigIndex])
+//            self.config.contentInsets = NSDirectionalEdgeInsets(top: 8, leading: 4, bottom: 8, trailing: 4)
+//            navConfigIndex += 1
+//        } // 실행안됨
+        
+        navigationItem.leftBarButtonItem = navLeftBarBtn
+        navigationItem.rightBarButtonItems = [navRightMenuBarBtn, navRightNotiBarBtn, navRightProfileBarBtn].reversed()
         
         let navBarAppearance = UINavigationBarAppearance()
         navBarAppearance.backgroundColor = Common.identityColor

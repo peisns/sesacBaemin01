@@ -12,18 +12,17 @@ enum Common {
     
     static let identityColor = UIColor(red: CGFloat(40/255.0), green: CGFloat(193/255.0), blue: CGFloat(188/255.0), alpha: CGFloat(1.0))
     
-    static func setNavBarButtonConfiguration(configuration: UIButton.Configuration, imageSystemName: String?, baseForeGroundColor: UIColor?, imagePlacement: NSDirectionalRectEdge?, imagePadding: CGFloat?, imageSize: CGFloat?, titleAttribute: AttributedString?) -> UIButton.Configuration {
-        var config: UIButton.Configuration = configuration
-        if let image = imageSystemName { config.image = UIImage(systemName: image) }
-        if let baseForeGroundColor = baseForeGroundColor { config.baseForegroundColor = baseForeGroundColor }
-        if let imagePlacement = imagePlacement { config.imagePlacement = imagePlacement }
-        if let imagePadding = imagePadding { config.imagePadding = imagePadding }
-        if let imageSize = imageSize { config.preferredSymbolConfigurationForImage = UIImage.SymbolConfiguration(pointSize: imageSize) }
-        if let titleAttribute = titleAttribute { config.attributedTitle = titleAttribute }
-        return config
+    
+    static func setNavBarButtonConfiguration(configuration: inout UIButton.Configuration, imageSystemName: String?, baseForeGroundColor: UIColor? = .white, imagePlacement: NSDirectionalRectEdge? = .leading, imagePadding: CGFloat? = 0, imageSize: CGFloat? = 0, titleAttribute: AttributedString? = nil) {
+        if let imageSystemName = imageSystemName { configuration.image = UIImage(systemName: imageSystemName) }
+        if let baseForeGroundColor = baseForeGroundColor { configuration.baseForegroundColor = baseForeGroundColor }
+        if let imagePlacement = imagePlacement { configuration.imagePlacement = imagePlacement }
+        if let imagePadding = imagePadding { configuration.imagePadding = imagePadding }
+        if let imageSize = imageSize { configuration.preferredSymbolConfigurationForImage = UIImage.SymbolConfiguration(pointSize: imageSize) }
+        if let titleAttribute = titleAttribute { configuration.attributedTitle = titleAttribute }
     }
+    
 }
-        
             
         
     

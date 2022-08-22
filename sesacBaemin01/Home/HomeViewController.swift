@@ -13,7 +13,6 @@ class HomeViewController: BaseViewController {
         
     override func loadView() {
         self.view = mainView
-        view.backgroundColor = Common.backgroundColor
     }
     
     override func viewDidLoad() {
@@ -23,7 +22,8 @@ class HomeViewController: BaseViewController {
     }
     
     func configure() {
-            setNav()
+        view.backgroundColor = Common.backgroundColor
+        setNav()
     }
     
     func setNav() {
@@ -38,6 +38,7 @@ class HomeViewController: BaseViewController {
         Common.setNavBarButtonConfiguration(configuration: &navRightMenuBtnConfig, imageSystemName: "square.grid.2x2")
         navRightMenuBtnConfig.contentInsets = NSDirectionalEdgeInsets(top: 8, leading: 4, bottom: 8, trailing: 4)
         let navRightMenuBtn = UIButton(configuration: navRightMenuBtnConfig)
+        navRightMenuBtn.addTarget(self, action: #selector(navRightMenuBtnClicked), for: .touchUpInside)
         let navRightMenuBarBtn = UIBarButtonItem(customView: navRightMenuBtn)
 //
         var navRightNotiBtnConfig = UIButton.Configuration.plain()
@@ -51,16 +52,6 @@ class HomeViewController: BaseViewController {
         navRightProfileBtnConfig.contentInsets = NSDirectionalEdgeInsets(top: 8, leading: 4, bottom: 8, trailing: 4)
         let navRightProfileBtn = UIButton(configuration: navRightProfileBtnConfig)
         let navRightProfileBarBtn = UIBarButtonItem(customView: navRightProfileBtn)
-    
-//        let navRightconfigs = [navRightMenuBtnConfig, navRightNotiBtnConfig, navRightProfileBtnConfig]
-//        var navConfigIndex = 0
-//        let navRightImages = ["square.grid.2x2", "bell", "face.smiling"]
-//        for config in navRightconfigs {
-//            var config = config // 왜 이렇게 해줘야 하는지 잘 모르겠음
-//            Common.setNavBarButtonConfiguration(configuration: &config, imageSystemName: navRightImages[navConfigIndex])
-//            self.config.contentInsets = NSDirectionalEdgeInsets(top: 8, leading: 4, bottom: 8, trailing: 4)
-//            navConfigIndex += 1
-//        } // 실행안됨
         
         navigationItem.leftBarButtonItem = navLeftBarBtn
         navigationItem.rightBarButtonItems = [navRightMenuBarBtn, navRightNotiBarBtn, navRightProfileBarBtn].reversed()
@@ -68,11 +59,15 @@ class HomeViewController: BaseViewController {
         let navBarAppearance = UINavigationBarAppearance()
         navBarAppearance.backgroundColor = Common.identityColor
         navBarAppearance.shadowColor = .clear
+        navBarAppearance.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
         self.navigationController?.navigationBar.standardAppearance = navBarAppearance
         self.navigationController?.navigationBar.scrollEdgeAppearance = navBarAppearance
-        
-
+        UINavigationBar.appearance().tintColor = Common.backgroundColor
     }
     
+    @objc func navRightMenuBtnClicked() {
+        let vc = HomeShoppingListViewController()
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
 }
 

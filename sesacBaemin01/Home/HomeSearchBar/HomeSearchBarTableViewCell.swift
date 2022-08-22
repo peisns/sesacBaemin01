@@ -7,8 +7,8 @@
 
 import UIKit
 
-class HomeSearchBarTableViewCell: UITableViewCell, UISearchBarDelegate {
-    
+class HomeSearchBarTableViewCell: UITableViewCell {
+        
     let searchBar: UISearchBar = {
         let bar = UISearchBar()
         bar.searchBarStyle = .minimal
@@ -28,7 +28,7 @@ class HomeSearchBarTableViewCell: UITableViewCell, UISearchBarDelegate {
     }
     
     func configure() {
-        self.addSubview(searchBar)
+        self.contentView.addSubview(searchBar)
         searchBar.delegate = self
     }
     
@@ -38,5 +38,11 @@ class HomeSearchBarTableViewCell: UITableViewCell, UISearchBarDelegate {
             make.leading.trailing.equalTo(self).inset(16)
             make.height.equalTo(60)
         }
+    }
+}
+
+extension HomeSearchBarTableViewCell: UISearchBarDelegate {
+    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+        print(#function)
     }
 }

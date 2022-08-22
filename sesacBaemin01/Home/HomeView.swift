@@ -17,13 +17,6 @@ class HomeView: BaseView {
         return view
     }()
     
-    let topSerachBar: UISearchBar = {
-        let bar = UISearchBar()
-        bar.layer.cornerRadius = 0
-        bar.layer.borderWidth = 0
-        return bar
-    }()
-    
     override init(frame: CGRect) {
         super.init(frame: frame)
         
@@ -37,14 +30,16 @@ class HomeView: BaseView {
     
     override func configure() {
         super.configure()
-        topSerachBar.searchBarStyle = .minimal
-    }
     
-    override func setConstraints() {
         homeTableV.delegate = self
         homeTableV.dataSource = self
         
-        [homeTableV, topSerachBar].forEach {self.addSubview($0)}
+        self.addSubview(homeTableV)
+        
+        
+    }
+    
+    override func setConstraints() {
         
         super.setConstraints()
         homeTableV.snp.makeConstraints { make in
@@ -65,10 +60,15 @@ extension HomeView: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        var cell = UITableViewCell()
-        if indexPath.section == HomeSection.allCases.firstIndex(of: HomeSection.searchBar) {
+        var cell: UITableViewCell
+        switch indexPath.section {
+        case HomeSection.allCases.firstIndex(of: HomeSection.randomText):
+            cell = HomeRandomTextTableViewCell()
+        case HomeSection.allCases.firstIndex(of: HomeSection.searchBar):
             cell = HomeSearchBarTableViewCell()
-        } else {
+        case HomeSection.allCases.firstIndex(of: HomeSection.mainCategory):
+            cell = HomeMainCategoryTableViewCell()
+        default:
             cell = UITableViewCell()
         }
         return cell

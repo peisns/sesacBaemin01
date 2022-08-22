@@ -1,5 +1,5 @@
 //
-//  File.swift
+//  MHomeMainCategory.swift
 //  sesacBaemin01
 //
 //  Created by Brother Model on 2022/08/22.

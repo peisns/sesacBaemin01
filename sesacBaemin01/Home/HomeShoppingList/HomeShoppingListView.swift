@@ -7,7 +7,13 @@
 
 import UIKit
 
+import RealmSwift
+
 class HomeShoppingListView: BaseView {
+    
+    var items: Results<ShoppingItem>!
+    let localRealm = try! Realm()
+    
     let searchBar: UISearchBar = {
         let bar = UISearchBar()
         bar.searchBarStyle = .minimal
@@ -41,8 +47,9 @@ class HomeShoppingListView: BaseView {
         
         tableView.delegate = self
         tableView.dataSource = self
-        
         self.addSubview(tableView)
+        
+        items = localRealm.objects(ShoppingItem.self).sorted(byKeyPath: "item", ascending: false)
     }
     
     override func setConstraints() {
@@ -59,7 +66,6 @@ class HomeShoppingListView: BaseView {
             make.leading.trailing.bottom.equalToSuperview()
         }
     }
-
 }
 
 extension HomeShoppingListView: UITableViewDelegate, UITableViewDataSource {
@@ -68,12 +74,14 @@ extension HomeShoppingListView: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 30
+        return items.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = HomeShoppingListTableViewCell()
         cell.backgroundColor = .systemGray6
+        let row = items[indexPath.row]
+        cell.contentLabel.text = row.item
         return cell
     }
     
@@ -85,5 +93,13 @@ extension HomeShoppingListView: UITableViewDelegate, UITableViewDataSource {
 extension HomeShoppingListView: UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         print(#function)
+        let localRealm = try! Realm()
+
+        let content = ShoppingItem(item: searchBar.text ?? "", check: false, favorite: false)
+        try! localRealm.write({
+            localRealm.add(content)
+        })
+        searchBar.text = ""
+        tableView.reloadData()
     }
 }

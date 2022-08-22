@@ -10,6 +10,7 @@ import UIKit
 class HomeShoppingListViewController: BaseViewController {
 
     let mainView = HomeShoppingListView()
+
     
     override func loadView() {
         self.view = mainView

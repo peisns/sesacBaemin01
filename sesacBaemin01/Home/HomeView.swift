@@ -40,7 +40,6 @@ class HomeView: BaseView {
     }
     
     override func setConstraints() {
-        
         super.setConstraints()
         homeTableV.snp.makeConstraints { make in
             make.top.equalTo(self.safeAreaLayoutGuide)

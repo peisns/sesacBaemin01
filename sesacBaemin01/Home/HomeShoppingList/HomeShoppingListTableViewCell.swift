@@ -7,7 +7,13 @@
 
 import UIKit
 
+import RealmSwift
+
 class HomeShoppingListTableViewCell: UITableViewCell {
+    
+    var items: Results<ShoppingItem>!
+    let localRealm = try! Realm()
+    var checkClosure : (() -> Void) = {}
     
     let stackView: UIStackView = {
         let view = UIStackView()
@@ -46,8 +52,36 @@ class HomeShoppingListTableViewCell: UITableViewCell {
     }
     
     func configure() {
+        items = localRealm.objects(ShoppingItem.self).sorted(byKeyPath: "item", ascending: false)
+        
         self.contentView.addSubview(stackView)
         [checkIcon, contentLabel, favoriteIcon].forEach {self.stackView.addArrangedSubview($0)}
+        
+        checkIcon.addTarget(self, action: #selector(checkClicked) , for: .touchUpInside)
+        favoriteIcon.addTarget(self, action: #selector(favoriteClicked), for: .touchUpInside)
+        
+    }
+    func loadCheckBox(){
+        let checkImage = items[checkIcon.tag].check ? "checkmark.square.fill" : "checkmark.square"
+        checkIcon.setImage(UIImage(systemName: checkImage), for: .normal)
+    }
+    
+    @objc func checkClicked() {
+        try! self.localRealm.write{
+//            print(items)
+            print(checkIcon.tag)
+            print(self.items[checkIcon.tag].check)
+            self.items[checkIcon.tag].check = !self.items[checkIcon.tag].check
+            print(checkIcon.tag)
+            print(self.items[checkIcon.tag].check)
+            checkClosure()
+        }
+        
+    }
+    
+    
+    @objc func favoriteClicked() {
+        print(favoriteIcon.tag)
     }
     
     func setConstraints() {

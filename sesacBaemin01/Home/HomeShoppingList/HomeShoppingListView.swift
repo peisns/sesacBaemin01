@@ -49,7 +49,7 @@ class HomeShoppingListView: BaseView {
         tableView.dataSource = self
         self.addSubview(tableView)
         
-        items = localRealm.objects(ShoppingItem.self).sorted(byKeyPath: "item", ascending: false)
+        items = localRealm.objects(ShoppingItem.self).sorted(byKeyPath: "item", ascending: true)
     }
     
     override func setConstraints() {
@@ -82,17 +82,23 @@ extension HomeShoppingListView: UITableViewDelegate, UITableViewDataSource {
         cell.backgroundColor = .systemGray6
         let row = items[indexPath.row]
         cell.contentLabel.text = row.item
+        cell.favoriteIcon.tag = indexPath.row
+        cell.checkIcon.tag = indexPath.row
+        cell.loadCheckBox()
+        cell.checkClosure = {
+            print("why")
+            self.tableView.reloadData()
+        }
         return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 76
+        return 90
     }
 }
 
 extension HomeShoppingListView: UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        print(#function)
         let localRealm = try! Realm()
 
         let content = ShoppingItem(item: searchBar.text ?? "", check: false, favorite: false)

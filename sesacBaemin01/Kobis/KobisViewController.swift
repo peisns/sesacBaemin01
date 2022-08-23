@@ -1,6 +1,6 @@
 //
 //  KobisViewController.swift
-//  SeSAC2DiaryRealm
+//  sesacBaemin01
 //
 //  Created by Brother Model on 2022/08/23.
 //
@@ -20,6 +20,6 @@ class KobisViewController: BaseViewController {
         configure()
     }
     
-    override func configure() {
+    func configure() {
     }
 }

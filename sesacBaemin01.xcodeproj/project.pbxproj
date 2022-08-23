@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		354ABA9728B44C28005E04E4 /* Kobis in Resources */ = {isa = PBXBuildFile; fileRef = 354ABA9628B44C28005E04E4 /* Kobis */; };
+		354BDE7D28B44D1500ED6F62 /* KobisView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 354BDE7C28B44D1500ED6F62 /* KobisView.swift */; };
+		354BDE7F28B44D2A00ED6F62 /* KobisViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 354BDE7E28B44D2A00ED6F62 /* KobisViewController.swift */; };
 		356FFDFA28B3072500963001 /* HomeRandomTextTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356FFDF928B3072500963001 /* HomeRandomTextTableViewCell.swift */; };
 		356FFDFD28B3083500963001 /* HomeMainCategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356FFDFC28B3083500963001 /* HomeMainCategoryTableViewCell.swift */; };
 		356FFE0028B3119200963001 /* MHomeMainCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356FFDFF28B3119200963001 /* MHomeMainCategory.swift */; };
@@ -41,7 +42,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		354ABA9628B44C28005E04E4 /* Kobis */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Kobis; sourceTree = "<group>"; };
+		354BDE7C28B44D1500ED6F62 /* KobisView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KobisView.swift; sourceTree = "<group>"; };
+		354BDE7E28B44D2A00ED6F62 /* KobisViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KobisViewController.swift; sourceTree = "<group>"; };
 		356FFDF928B3072500963001 /* HomeRandomTextTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRandomTextTableViewCell.swift; sourceTree = "<group>"; };
 		356FFDFC28B3083500963001 /* HomeMainCategoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeMainCategoryTableViewCell.swift; sourceTree = "<group>"; };
 		356FFDFF28B3119200963001 /* MHomeMainCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MHomeMainCategory.swift; sourceTree = "<group>"; };
@@ -87,6 +89,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		354BDE7B28B44D0300ED6F62 /* Kobis */ = {
+			isa = PBXGroup;
+			children = (
+				354BDE7C28B44D1500ED6F62 /* KobisView.swift */,
+				354BDE7E28B44D2A00ED6F62 /* KobisViewController.swift */,
+			);
+			path = Kobis;
+			sourceTree = "<group>";
+		};
 		356FFDF828B306D900963001 /* HomeRandomText */ = {
 			isa = PBXGroup;
 			children = (
@@ -139,7 +150,7 @@
 		35BEDD8E2874055B00EF4334 /* sesacBaemin01 */ = {
 			isa = PBXGroup;
 			children = (
-				354ABA9628B44C28005E04E4 /* Kobis */,
+				354BDE7B28B44D0300ED6F62 /* Kobis */,
 				35F4E84D28B2A0C7007CA1FA /* Extension */,
 				35F4E84A28B29757007CA1FA /* Protocol */,
 				35F4E84428B286E1007CA1FA /* Model */,
@@ -314,7 +325,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				35BEDD9C2874056000EF4334 /* LaunchScreen.storyboard in Resources */,
-				354ABA9728B44C28005E04E4 /* Kobis in Resources */,
 				35BEDD992874056000EF4334 /* Assets.xcassets in Resources */,
 				35BEDD972874055B00EF4334 /* Main.storyboard in Resources */,
 			);
@@ -340,7 +350,9 @@
 				35F4E84F28B2A0F2007CA1FA /* UIViewController+Extension.swift in Sources */,
 				35DA3FBB28B38FB90084504E /* HomeShoppingListView.swift in Sources */,
 				35F4E84928B2953A007CA1FA /* HomeSearchBarTableViewCell.swift in Sources */,
+				354BDE7D28B44D1500ED6F62 /* KobisView.swift in Sources */,
 				356FFE0028B3119200963001 /* MHomeMainCategory.swift in Sources */,
+				354BDE7F28B44D2A00ED6F62 /* KobisViewController.swift in Sources */,
 				35F4E83E28B1FEAC007CA1FA /* CommomProperty.swift in Sources */,
 				35DA3FCC28B3D7F00084504E /* ShoppingListModel.swift in Sources */,
 				35F4E83A28AFC0A7007CA1FA /* BaseView.swift in Sources */,

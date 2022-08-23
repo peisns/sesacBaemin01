@@ -20,7 +20,7 @@ class ViewController: UIViewController {
     }
     
     func presentFirstScene() {
-        let navController = UINavigationController(rootViewController: HomeViewController())
+        let navController = UINavigationController(rootViewController: KobisViewController())
         navController.modalPresentationStyle = .fullScreen
         present(navController, animated: false)
     }

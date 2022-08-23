@@ -1,21 +1,33 @@
 //
 //  KobisView.swift
-//  SeSAC2DiaryRealm
+//  sesacBaemin01
 //
 //  Created by Brother Model on 2022/08/23.
 //
 
 import UIKit
 
-import Alamofire
 import RealmSwift
-import SnapKit
+import Alamofire
 import SwiftyJSON
 
-
-class KobisView: BaseView {
+class movieInfo: Object {
+    @Persisted var title: String
+    @Persisted var rank: String
     
-//    var items: Results<struct>!
+    @Persisted(primaryKey: true) var objectId: ObjectId
+
+    convenience init(title: String, rank: String) {
+        self.init()
+        self.title = title
+        self.rank = rank
+    }
+    
+}
+
+class KobisView: UIView {
+
+    var items: Results<movieInfo>!
     let localRealm = try! Realm()
 
     var datePicker: UIDatePicker = {
@@ -51,21 +63,19 @@ class KobisView: BaseView {
     }
     
     @objc func datePickerSelected(_ sender: UIDatePicker) {
-        print(#function)
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyyMMdd"
         let selectedDate = sender.date
         let dateString = dateFormatter.string(from: selectedDate)
+        print(dateString)
         
         AF.request("http://kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.json?key=0c9f266cf5a4553cc4c21633b46475f0&targetDt=\(dateString)", method: .get).validate().responseData { response in
             switch response.result {
             case .success(let value):
                 let json = JSON(value)
-                let jsonList = json["dailyBoxOfficeList"].arrayValue
-                let movieName = jsonList.map { $0["movieNm"]}
-                let moviernum = jsonList.map { $0["rnum"]}
-                
-                print(movieName, moviernum)
+                print(json)
+                let jsonList = json["boxOfficeResult"]["dailyBoxOfficeList"].arrayValue
+                let movieName = jsonList.map { $0["movieNm"].stringValue}
                 
             case .failure(let error):
                 print(error)
@@ -73,6 +83,6 @@ class KobisView: BaseView {
         }
         
     }
-        
-}
+    
 
+}
